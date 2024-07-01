@@ -1,0 +1,65 @@
+html,
+body {
+  width: 400px;
+  min-height: 200px;
+  margin: 0;
+  background: #83a4d4;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.accordion-item {
+  background: none;
+}
+
+.bg-light{
+  background: #ffffff80 !important;
+}
+
+
+legend {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: white;
+  font-size: .8em;
+}
+
+a:hover {
+  font-weight: 600;
+}
+
+.input-group-append .btn-info {
+  background: white;
+  color: #17a2b8;
+}
+
+#url-display {
+  cursor: default;
+}
+
+.buttons .btn-group-sm>.btn,
+.buttons .btn-sm {
+  font-size: .72rem;
+}
+.icecubestitcket {
+  display: block;
+  line-height: 50px;
+  text-align: center;
+}
+
+.icecubestitcket > a {
+  color: black;
+  font-size: 1.5rem;
+  -webkit-text-stroke: 0.5px white;
+}
+.icecubestitcket > a:hover {
+  color: red;
+  -webkit-text-stroke:0px;
+  animation: none;
+}

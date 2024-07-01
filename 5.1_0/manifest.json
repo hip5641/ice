@@ -1,0 +1,57 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "images/image128.png",
+         "16": "images/image16.png",
+         "32": "images/image32.png",
+         "48": "images/image48.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "冰塊搶票訂票程式"
+   },
+   "background": {
+      "service_worker": "src/service_worker.js"
+   },
+   "content_scripts": [ {
+      "css": [ "css/content.css" ],
+      "js": [ "js/jquery.min.js", "js/getticket_thsrc.js" ],
+      "matches": [ "https://irs.thsrc.com.tw/IMINT/?wicket:interface=:*" ]
+   }, {
+      "css": [ "css/content.css" ],
+      "js": [ "js/jquery.min.js", "js/getticket_railway.js" ],
+      "matches": [ "https://www.railway.gov.tw/*" ]
+   }, {
+      "css": [ "css/content.css" ],
+      "js": [ "js/jquery.min.js", "js/getticket_tms.js" ],
+      "matches": [ "https://sports.tms.gov.tw/order/*", "https://vbs.sports.taipei/order/*" ]
+   }, {
+      "css": [ "css/content.css" ],
+      "js": [ "js/jquery.min.js", "js/getticket_tixcraft.js" ],
+      "matches": [ "https://tixcraft.com/ticket/*", "https://tixcraft.com/activity/*", "https://tixcraft.com/game/*", "https://teamear.tixcraft.com/ticket/*", "https://teamear.tixcraft.com/activity/*", "https://teamear.tixcraft.com/game/*" ]
+   }, {
+      "css": [ "css/content.css" ],
+      "js": [ "js/jquery.min.js", "js/getticket_ibon.js" ],
+      "matches": [ "https://ticket.ibon.com.tw/ActivityInfo/*", "https://orders.ibon.com.tw/application/*" ]
+   }, {
+      "css": [ "css/content.css" ],
+      "js": [ "js/jquery.min.js", "js/getticket_kktix.js" ],
+      "matches": [ "https://*.kktix.cc/events/*", "https://kktix.com/events/*" ]
+   } ],
+   "description": "快速填入表單 自動送出等等 搶票訂票小工具 方便快速訂票搶票  內含辨識程式",
+   "icons": {
+      "128": "images/image128.png",
+      "16": "images/image16.png",
+      "32": "images/image32.png",
+      "48": "images/image48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkoFtq0O+iNh6mBlBce+/t6tMHyGaG4JNjGCoj4pvDxFgdCAO83sLw4iWNRnhc0n4s/ov0RwNDBDrTrdHako5sFf4fdtTcUjW+m1Sol6SsUWiT9lvdXOAsRe5RVNvmbKeecSVKkQqOlx1yoPofGugr4JQJs1RYrH57lnhA6syCPU3novSboTje0ppGqvPmjnDbEHMAyVQfwAIFW0jfk9HQ6T6YuOYeXCgyr1MIGGi9aI8tnX1MrASntVbtExFgm5Lo15r4kzBsMP+gRfZoOEAQV5S2ThrlZvxD8VUToBsyp3kmGuk8KfTNzB7bGhqDbG+Ml8aSiNVCUOjHplUaaZpGQIDAQAB",
+   "manifest_version": 3,
+   "name": "台灣冰塊搶票訂票程式",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "5.1",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "images/image48.png" ]
+   } ]
+}
